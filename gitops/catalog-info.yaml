@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ccdh3zo45-python-gitops
+  description: This is GitOps manifest for ccdh3zo45-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=ccdh3zo45-python
+    backstage.io/kubernetes-id: ccdh3zo45-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: tnevrlka-rhtap/ccdh3zo45-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ccdh3zo45-python
